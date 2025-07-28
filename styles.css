@@ -57,4 +57,41 @@ opacity: 1,0;
 }
 .categoria h2 {
     color: rgb(243, 13, 13);
+
+    .video-thumbnail {
+    position: relative; /* Importante para posicionar o overlay */
+    width: 300px; /* Largura da sua thumbnail */
+    height: 180px; /* Altura da sua thumbnail */
+    overflow: hidden; /* Garante que nada saia do contêiner */
+    cursor: pointer; /* Indica que é clicável */
+    border-radius: 8px; /* Cantos arredondados, opcional */
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    transition: transform 0.3s ease; /* TRANSITION para a imagem, para animar o zoom */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s ease; /* TRANSITION para o overlay, para animar o fade */
+}
+
+.overlay i {
+    color: white;
+    font-size: 40px;
+    /* Outros estilos para o ícone, se necessário */
+}
 }
